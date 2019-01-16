@@ -12,10 +12,10 @@ public class UserPrefernece {
     }
 
 
-    private IPobject ipPort;
+    private IPobject ipPort=new IPobject();
     private boolean booltoast;
     private boolean boolshowmsg;
-    private String message;
+    private String message="";
 
     private UserPrefernece() {
 
