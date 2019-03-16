@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_findPhoneTrig"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            card_view:cardCornerRadius="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/findPhone"
+                android:textSize="30dp" />
+            <TextView
+                android:id="@+id/text_findphone_trig"
+                android:layout_gravity="bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/findPhone"
+                android:layout_marginBottom="5dp"
+                android:textSize="15dp" />
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_copytext"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            card_view:cardCornerRadius="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/copytext"
+                android:textSize="30dp" />
+            <TextView
+                android:id="@+id/text_copytext_trig"
+                android:layout_gravity="bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/findPhone"
+                android:layout_marginBottom="5dp"
+                android:textSize="15dp" />
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_sendclip"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            card_view:cardCornerRadius="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sendClipboard"
+                android:textSize="30dp" />
+            <TextView
+                android:id="@+id/text_sendclip_trig"
+                android:layout_gravity="bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/findPhone"
+                android:layout_marginBottom="5dp"
+                android:textSize="15dp" />
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

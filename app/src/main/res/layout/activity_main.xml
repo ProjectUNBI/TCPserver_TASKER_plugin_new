@@ -3,53 +3,53 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:ignore="MergeRootFrame" >
- 
+    tools:ignore="MergeRootFrame">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="25dp"
-        android:orientation="vertical" >
- 
+        android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
- 
+            android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/textViewSrvrIP"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="Server IP"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
- 
+
             <TextView
                 android:id="@+id/textViewSrvrIP1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=":"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
- 
+
             <TextView
                 android:id="@+id/textViewServerIP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
         </LinearLayout>
- 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="50dp"
-            android:orientation="horizontal" >
- 
+            android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/textViewSrvrPort"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="Server Port"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
- 
+
             <TextView
                 android:id="@+id/textViewSrvrPort1"
                 android:layout_width="wrap_content"
@@ -63,56 +63,155 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
         </LinearLayout>
- 
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
-            android:orientation="horizontal" >
-            
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
             <TextView
-            android:id="@+id/textViewClMsg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Client Message"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+                android:id="@+id/textViewClMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Client Message"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <Button
                 android:id="@+id/button1"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
-                android:minHeight="28dp"
+                android:layout_alignParentRight="true"
                 android:minWidth="28dp"
+                android:minHeight="28dp"
                 android:text="Clear" />
 
             <Switch
                 android:id="@+id/switchmsg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginEnd="90dp"/>
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="90dp" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewcustomtask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Custom Task"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+            <Switch
+                android:id="@+id/switchcustom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="90dp" />
 
         </RelativeLayout>
 
-        <ScrollView
-        android:id="@+id/scrollView1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textViewClientMessage"
+            <ScrollView
+                android:id="@+id/scrollView1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/raw_msg" />
+                <TextView
+                    android:id="@+id/textViewClientMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+
+            </ScrollView>
+
+            <ScrollView
+                android:id="@+id/scrollView2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/decrypted" />
+
+                    <TextView
+                        android:id="@+id/textViewClientMessagedecrypted"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:text=""
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+
+            </ScrollView>
+
+            <ScrollView
+                android:id="@+id/scrollView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:text=""
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-        </ScrollView>
+                android:layout_marginTop="10dp"
+                android:layout_weight="1">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/doneID" />
+
+                    <TextView
+                        android:id="@+id/textViewClientMessesVerificID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:text=""
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                </LinearLayout>
+
+            </ScrollView>
+        </LinearLayout>
 
     </LinearLayout>
- 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/activityfrag"/>
 </FrameLayout>

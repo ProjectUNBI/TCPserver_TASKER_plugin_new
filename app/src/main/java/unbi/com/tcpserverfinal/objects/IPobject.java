@@ -1,4 +1,4 @@
-package unbi.com.tcpserverfinal;
+package unbi.com.tcpserverfinal.objects;
 
 public class IPobject {
     private String ip;

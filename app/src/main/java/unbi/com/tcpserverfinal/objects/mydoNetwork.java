@@ -1,4 +1,4 @@
-package unbi.com.tcpserverfinal;
+package unbi.com.tcpserverfinal.objects;
 
 import android.os.Bundle;
 import android.os.Handler;

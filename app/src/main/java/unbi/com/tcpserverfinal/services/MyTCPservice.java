@@ -1,4 +1,4 @@
-package unbi.com.tcpserverfinal;
+package unbi.com.tcpserverfinal.services;
 
 
 import android.app.Notification;
@@ -18,6 +18,11 @@ import android.widget.Toast;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+
+import unbi.com.tcpserverfinal.MySendmessage;
+import unbi.com.tcpserverfinal.intrfce.MyTCPinterface;
+import unbi.com.tcpserverfinal.objects.mydoNetwork;
+import unbi.com.tcpserverfinal.singleton.UserPrefernece;
 
 public class MyTCPservice extends Service implements MyTCPinterface {
     MyTCPinterface myTCPinterface;

@@ -15,7 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="unbi.com.tcpserverfinal.MainActivity">
+        <activity android:name="unbi.com.tcpserverfinal.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,12 +23,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="unbi.com.tcpserverfinal.setting" />
+            android:name="unbi.com.tcpserverfinal.activity.setting" />
         <service
-            android:name="unbi.com.tcpserverfinal.MyTCPservice"
+            android:name="unbi.com.tcpserverfinal.services.MyTCPservice"
             android:enabled="true" />
 
-        <receiver android:name="unbi.com.tcpserverfinal.BootCompletedIntentReceiver">
+        <receiver android:name="unbi.com.tcpserverfinal.services.BootCompletedIntentReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />

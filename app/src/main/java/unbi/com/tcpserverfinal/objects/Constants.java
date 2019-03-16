@@ -1,4 +1,4 @@
-package unbi.com.tcpserverfinal;
+package unbi.com.tcpserverfinal.objects;
 
 public class Constants {
 
@@ -13,6 +13,7 @@ public class Constants {
     public static final String BUNDLE_FROM_INTENT = "putInt#@###";
     public static final String USER_SPRF = "UserSharePref";
     public static final String USER_DATA = "UserData";
+    public static final String USER_CUSTOM = "UserCustumAction";
     public static final String BOOTCOMPLETE = "android.intent.action.BOOT_COMPLETED";
     public static final String INTENT_TCP_SENDMSG = "Intent.unbi.tcpSend.TCP_MSG";
     public static final String INTENT_TCP_AUTOREM = "Intent.unbi.tcpSend.AUTOREM";

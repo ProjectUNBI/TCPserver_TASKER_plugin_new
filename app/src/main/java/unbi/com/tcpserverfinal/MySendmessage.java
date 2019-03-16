@@ -6,6 +6,12 @@ import android.util.Log;
 
 import org.apache.commons.codec.binary.Base64;
 
+import unbi.com.tcpserverfinal.objects.Constants;
+import unbi.com.tcpserverfinal.objects.IPobject;
+import unbi.com.tcpserverfinal.objects.mydoNetwork;
+import unbi.com.tcpserverfinal.singleton.UserPrefernece;
+import unbi.com.tcpserverfinal.utility.AES_Util;
+
 public class MySendmessage {
     private final String TAG = "MYTCPservice";
     private IPobject ipPort;
@@ -16,7 +22,7 @@ public class MySendmessage {
     public MySendmessage(Intent intent) {
         if (intent != null) {
             this.myintent = intent;
-            this.msg = intent.getStringExtra(Constants.MESSAGE);
+            this.msg = AES_Util.encrypt((intent.getStringExtra(Constants.MESSAGE)));
             this.ipPort = new IPobject(intent.getStringExtra(Constants.ADDRESS));
         }
     }
@@ -56,7 +62,7 @@ public class MySendmessage {
 
         return "POST / HTTP/1.1\r\nUser-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.215 Safari/535.1\r\nAccept: application/json,text/html,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5\r\nContent-Type: application/json\r\nContent-Length: "
                 + String.valueOf(length)
-                + "\r\nHost: 192.168.1.253:1818\r\nConnection: Keep-Alive\r\n\r\n{\"communication_base_params\":{\"type\":\"Message\",\"fallback\":false,\"via\":\"Wifi\"},\"sender\":\""
+                + "\r\nHost: "+ UserPrefernece.getInstance().getInetAdress()+":1818\r\nConnection: Keep-Alive\r\n\r\n{\"communication_base_params\":{\"type\":\"Message\",\"fallback\":false,\"via\":\"Wifi\"},\"sender\":\""
                 + newkey +
                 "\",\"ttl\":-12114,\"collapseKey\":\"\",\"password\":\"\",\"message\":\""
                 + this.msg

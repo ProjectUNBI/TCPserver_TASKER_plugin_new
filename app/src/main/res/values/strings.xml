@@ -4,5 +4,15 @@
     <string name="app_name">TCP Server Event [Oreo+]</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="encryption">Encyption</string>
+    <string name="verification">Verification</string>
+    <string name="password">Password: </string>
+    <string name="doneID">Done IDs:</string>
+    <string name="decrypted">Decrypted text:</string>
+    <string name="raw_msg">Raw msg:</string>
+    <string name="action_customtask">CustomTask</string>
+    <string name="findPhone">Find Phone</string>
+    <string name="copytext">Copy Text</string>
+    <string name="sendClipboard">Send clipboard text</string>
 
 </resources>
